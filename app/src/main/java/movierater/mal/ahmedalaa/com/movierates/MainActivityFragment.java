@@ -55,7 +55,9 @@ public class MainActivityFragment extends Fragment {
                 else if (user_option == 1) {
                     query = "movie/top_rated";
                 }
-
+                else if (user_option == 2) {
+                    query = "$$FAVOURITE$$";
+                }
                 Intent serviceIntent = new Intent(getActivity().getApplicationContext(), MovieApi_service.class);
                 serviceIntent.putExtra("uri", server_base+query+api_key);
                 getActivity().startService(serviceIntent);

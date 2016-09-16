@@ -78,6 +78,13 @@ public class MainActivity extends AppCompatActivity {
                 getFragmentRefreshListener().onRefresh();
             }
         }
+        else if (id == R.id.fav_item) {
+            editor.putInt("order_by", 2);
+            editor.apply();
+            if (getFragmentRefreshListener() != null) {
+                getFragmentRefreshListener().onRefresh();
+            }
+        }
 
         return super.onOptionsItemSelected(item);
     }
