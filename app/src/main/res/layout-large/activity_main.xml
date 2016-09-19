@@ -37,10 +37,10 @@
         android:layout_gravity="left|bottom" />
 
     <FrameLayout
-        android:layout_width="479dp"
+        android:layout_width="585dp"
         android:layout_height="586dp"
         android:id="@+id/details_frame"
-        android:layout_gravity="center_horizontal|bottom">
+        android:layout_gravity="right|bottom">
     </FrameLayout>
 
 

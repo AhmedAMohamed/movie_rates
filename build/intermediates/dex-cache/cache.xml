@@ -1,2 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/ahmedalaa/.gradle/caches/modules-2/files-2.1/io.github.openfeign/feign-core/9.3.1/d8c6cf3402b8a39640ef2d16005a18eb271ba69a/feign-core-9.3.1.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="d8c6cf3402b8a39640ef2d16005a18eb271ba69a">
+        <dex dex="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/pre-dexed/debug/feign-core-9.3.1_e8a6a9803a3201bd82dbdfcb36c5126c0588b67d.jar" />
+    </item>
+    <item
+        jar="/Users/ahmedalaa/.gradle/caches/modules-2/files-2.1/io.github.openfeign/feign-gson/9.3.1/2a454de97a581f56b9cd2853f5a89f95ba672803/feign-gson-9.3.1.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="2a454de97a581f56b9cd2853f5a89f95ba672803">
+        <dex dex="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/pre-dexed/debug/feign-gson-9.3.1_692e09cff74f14b61263e6b3f6eae9a8b2c4480d.jar" />
+    </item>
+    <item
+        jar="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="6d7d803871e3203465f71a163e7af104f807b446">
+        <dex dex="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.1.1_cba44216b53efdbdf1a0f49eac0c316269082e66.jar" />
+    </item>
+    <item
+        jar="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="787871951412550519b0222aba3c9df4cea49875">
+        <dex dex="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.1.1_097400881879f9b937f9d7c690ddb642d73008ab.jar" />
+    </item>
+    <item
+        jar="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="c936c1bd42f0c018c18920c7bec619ef056b24f8">
+        <dex dex="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.1.1_be0eb0fa6783a73cff579bfa4e6e8bb2aa5e20bf.jar" />
+    </item>
+    <item
+        jar="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="f62e763609f65e47dc6c498760a4accf02776788">
+        <dex dex="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.1.1_f59b681b11524ebc38b1aeafbf7dc7dfe324737a.jar" />
+    </item>
+    <item
+        jar="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="9754e9f14586c1a57633d61291db282dfc051e1c">
+        <dex dex="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_d3ce07e58881290cefc12ca5bc7542c542942066.jar" />
+    </item>
+    <item
+        jar="/Users/ahmedalaa/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_9c275bc4c4d0b0e02c6c8feac2722f6d6bcd04f4.jar" />
+    </item>
+    <item
+        jar="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.1.1/jars/libs/internal_impl-24.1.1.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
+        <dex dex="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/pre-dexed/debug/internal_impl-24.1.1_26083f75bcc459ab3141d9b573a409193cd0d8f0.jar" />
+    </item>
+    <item
+        jar="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="5db49c323f74eda4ab7ec0f7fa83ba26ffc83345">
+        <dex dex="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/pre-dexed/debug/instant-run_aab9bc302bac3703139a9fc80d2fa752466b5cce.jar" />
+    </item>
+    <item
+        jar="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/exploded-aar/com.android.support/design/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="e195bd694d5389acfba27ff4fdfa64c4c65b2c05">
+        <dex dex="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/pre-dexed/debug/com.android.support-design-24.1.1_891b50716d125370f24b305a524ecd554ec860a3.jar" />
+    </item>
+    <item
+        jar="/Users/ahmedalaa/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.5/686c608d1805b6d4d425ec4459e88164ffc85870/gson-2.5.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="686c608d1805b6d4d425ec4459e88164ffc85870">
+        <dex dex="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/pre-dexed/debug/gson-2.5_48cb14072a73843f5094859312bc9c4cda00c480.jar" />
+    </item>
+    <item
+        jar="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="1256c10604bb098490eab070d76754ac5ceab35c">
+        <dex dex="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.1.1_6711b885f51be998833b13f8e8a69600f3b33fdd.jar" />
+    </item>
+    <item
+        jar="/Users/ahmedalaa/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/24.1.1/3af19f153122737b372622fa6c81dd11a1c6b999/support-annotations-24.1.1.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
+        <dex dex="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/pre-dexed/debug/support-annotations-24.1.1_454988ce4c1b90e230c57a66f47c3c6ed7c1f674.jar" />
+    </item>
+    <item
+        jar="/Users/ahmedalaa/.gradle/caches/modules-2/files-2.1/org.jvnet/animal-sniffer-annotation/1.0/67da8e0d8a8ef79c461a489f9f7bb3e86e23ccae/animal-sniffer-annotation-1.0.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="67da8e0d8a8ef79c461a489f9f7bb3e86e23ccae">
+        <dex dex="/Users/ahmedalaa/Documents/Work/MAL/MovieRates/app/build/intermediates/pre-dexed/debug/animal-sniffer-annotation-1.0_3b3c4304e16251e87de3d250448e6ff123e1ae20.jar" />
+    </item>
+
+</items>
