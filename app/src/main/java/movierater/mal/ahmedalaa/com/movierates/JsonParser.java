@@ -15,13 +15,13 @@ import java.util.ArrayList;
 public class JsonParser {
 
     String j_data;
-    Bundle data;
+    ArrayList<MovieData> data;
     public JsonParser(String json) {
         j_data = json;
-        data = new Bundle();
+        data = new ArrayList();
     }
 
-    public Bundle getData() throws JSONException {
+    public ArrayList<MovieData> getData() throws JSONException {
         ArrayList<MovieData> result = new ArrayList();
 
         JSONObject json = new JSONObject(j_data);
@@ -38,9 +38,10 @@ public class JsonParser {
             movie.setPoster_path(movie_json.getString("poster_path"));
             movie.setDate(movie_json.getString("release_date"));
             movie.setVote_average(movie_json.getDouble("vote_average"));
+            movie.setId(movie_json.getString("id"));
             result.add(movie);
         }
-        data.putSerializable("data", result);
+        data = result;
         return data;
     }
 }

@@ -6,25 +6,39 @@ import android.os.Parcelable;
 /**
  * Created by ahmedalaa on 9/16/16.
  */
-public class Trailer implements Parcelable{
+public class Trailer extends MovieAdded implements Parcelable{
 
     private String id;
-    private String author;
-    private String content;
-    private String url;
+    private String iso_639_1;
+    private String iso_3166_1;
+    private String key;
+    private String name;
+    private String site;
+    private String size;
+    private String type;
 
-    public Trailer(String id, String author, String content, String url) {
+    public Trailer(String id, String iso_639_1, String iso_3166_1, String key, String name, String site, String size, String type) {
+        super(true);
         this.id = id;
-        this.author = author;
-        this.content = content;
-        this.url = url;
+        this.iso_639_1 = iso_639_1;
+        this.iso_3166_1 = iso_3166_1;
+        this.key = key;
+        this.name = name;
+        this.site = site;
+        this.size = size;
+        this.type = type;
     }
 
     protected Trailer(Parcel in) {
+        super(in.readByte() != 0);
         id = in.readString();
-        author = in.readString();
-        content = in.readString();
-        url = in.readString();
+        iso_639_1 = in.readString();
+        iso_3166_1 = in.readString();
+        key = in.readString();
+        name = in.readString();
+        site = in.readString();
+        size = in.readString();
+        type = in.readString();
     }
 
     public static final Creator<Trailer> CREATOR = new Creator<Trailer>() {
@@ -47,61 +61,60 @@ public class Trailer implements Parcelable{
         this.id = id;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getIso_639_1() {
+        return iso_639_1;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setIso_639_1(String iso_639_1) {
+        this.iso_639_1 = iso_639_1;
     }
 
-    public String getContent() {
-        return content;
+    public String getIso_3166_1() {
+        return iso_3166_1;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setIso_3166_1(String iso_3166_1) {
+        this.iso_3166_1 = iso_3166_1;
     }
 
-    public String getUrl() {
-        return url;
+    public String getKey() {
+        return key;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setKey(String key) {
+        this.key = key;
     }
 
-    @Override
-    public String toString() {
-        return "Trailer{" +
-                "id='" + id + '\'' +
-                ", author='" + author + '\'' +
-                ", content='" + content + '\'' +
-                ", url='" + url + '\'' +
-                '}';
+    public String getName() {
+        return name;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Trailer trailer = (Trailer) o;
-
-        if (!id.equals(trailer.id)) return false;
-        if (author != null ? !author.equals(trailer.author) : trailer.author != null) return false;
-        if (!content.equals(trailer.content)) return false;
-        return url.equals(trailer.url);
-
+    public void setName(String name) {
+        this.name = name;
     }
 
-    @Override
-    public int hashCode() {
-        int result = id.hashCode();
-        result = 31 * result + (author != null ? author.hashCode() : 0);
-        result = 31 * result + content.hashCode();
-        result = 31 * result + url.hashCode();
-        return result;
+    public String getSite() {
+        return site;
+    }
+
+    public void setSite(String site) {
+        this.site = site;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Override
@@ -112,8 +125,12 @@ public class Trailer implements Parcelable{
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(id);
-        parcel.writeString(author);
-        parcel.writeString(content);
-        parcel.writeString(url);
+        parcel.writeString(iso_639_1);
+        parcel.writeString(iso_3166_1);
+        parcel.writeString(key);
+        parcel.writeString(name);
+        parcel.writeString(site);
+        parcel.writeString(size);
+        parcel.writeString(type);
     }
 }

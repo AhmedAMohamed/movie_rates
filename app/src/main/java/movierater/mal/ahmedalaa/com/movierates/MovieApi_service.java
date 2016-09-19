@@ -13,6 +13,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
@@ -37,7 +38,6 @@ public class MovieApi_service extends IntentService{
     public MovieApi_service(String name) {
         super(name);
     }
-
     @Override
     protected void onHandleIntent(Intent intent) {
 
@@ -73,6 +73,11 @@ public class MovieApi_service extends IntentService{
                     public int findIndex(JSONArray ar, MovieData m) throws JSONException {
                         return -1;
                     }
+
+                    @Override
+                    public boolean foundInFav(JSONArray ar, MovieData m) throws JSONException {
+                        return false;
+                    }
                 };
                 try {
                     movies = handler.getFavMov();
@@ -102,19 +107,19 @@ public class MovieApi_service extends IntentService{
                             stringBuilder.append(line).append("\n");
                         }
                         bufferedReader.close();
-
-                        Intent resultsIntent = new Intent("data_pop_movies");
-                        JsonParser parser = new JsonParser(stringBuilder.toString());
-                        Bundle dataBundle = parser.getData();
-                        resultsIntent.putExtra("data", dataBundle);
-                        sendBroadcast(resultsIntent);
-
                     }
                     catch (Exception e) {
                         Log.e("error_in", e.toString());
                     }
                     finally{
                         urlConnection.disconnect();
+                        JsonParser parser = new JsonParser(stringBuilder.toString());
+                        ArrayList<MovieData> movies_list = parser.getData();
+                        Intent resultsIntent = new Intent("data_pop_movies");
+                        Bundle dataBundle = new Bundle();
+                        dataBundle.putSerializable("data", movies_list);
+                        resultsIntent.putExtra("data", dataBundle);
+                        sendBroadcast(resultsIntent);
                     }
                 }
                 catch (Exception ex) {
@@ -123,4 +128,5 @@ public class MovieApi_service extends IntentService{
             }
         }
     }
+
 }

@@ -72,6 +72,12 @@ public class MainActivityFragment extends Fragment {
                 ArrayList<MovieData> movies = (ArrayList<MovieData>)seriData;
                 pop_movies.clear();
                 imgPathes.clear();
+                String server_base = "https://api.themoviedb.org/3/movie/";
+                String api_key = "/reviews?api_key=3bd2b46edbf8a79a9b433f1f9c892323";
+                Intent serviceIntent = new Intent(getActivity().getApplicationContext(), ReviewAPI_Service.class);
+                serviceIntent.putExtra("data", movies);
+                getActivity().startService(serviceIntent);
+
                 pop_movies = movies;
                 for (MovieData movie : movies) {
                     imgPathes.add("http://image.tmdb.org/t/p/w185" + movie.getBackdrop_path());
