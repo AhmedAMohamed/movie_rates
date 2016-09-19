@@ -7,6 +7,7 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -90,11 +91,25 @@ public class MainActivityFragment extends Fragment {
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
+
                 Bundle data = new Bundle();
                 data.putParcelable("data",  pop_movies.get(position));
-                Intent detailsActivity = new Intent(getActivity().getApplicationContext(),Details.class);
-                detailsActivity.putExtra("data", data);
-                getActivity().startActivity(detailsActivity);
+
+                if (getActivity().findViewById(R.id.details_frame) != null) {
+                    FragmentTransaction t = getActivity().getSupportFragmentManager()
+                            .beginTransaction();
+                    Fragment mFrag = new DetailsFragment();
+                    mFrag.setArguments(data);
+
+                    t.replace(R.id.details_frame,mFrag, "TAG");
+                    t.commit();
+
+                } else {
+                    Intent intent = new Intent(getActivity().getApplicationContext(), Details.class);
+                    intent.putExtra("movie", data);
+                    getActivity().startActivity(intent);
+
+                }
             }
         });
 

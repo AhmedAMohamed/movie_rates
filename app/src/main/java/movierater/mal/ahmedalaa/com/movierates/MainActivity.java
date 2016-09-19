@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
     private FragmentRefreshListener fragmentRefreshListener;
 
+    public boolean mTwoPane;
+
     public FragmentRefreshListener getFragmentRefreshListener() {
         return fragmentRefreshListener;
     }
@@ -32,14 +34,19 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+        if (findViewById(R.id.details_frame) != null) {
+            mTwoPane = true;
+            if (savedInstanceState == null) {
+            /*
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.details_frame, new DetailsActivityFragment(), DETAILFRAGMENT_TAG)
+                        .commit();
+            */
             }
-        });
+        } else {
+            mTwoPane = false;
+            getSupportActionBar().setElevation(0f);
+        }
 
 
     }

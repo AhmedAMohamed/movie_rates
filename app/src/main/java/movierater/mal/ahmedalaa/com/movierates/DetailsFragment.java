@@ -68,7 +68,12 @@ public class DetailsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Bundle m = getActivity().getIntent().getBundleExtra("data");
+
+        Bundle m = this.getArguments();
+        if (m == null) {
+            m = getActivity().getIntent().getBundleExtra("movie");
+        }
+
         final MovieData movie = (MovieData) m.getParcelable("data");
 
         final View v = inflater.inflate(R.layout.fragment_details, container, false);
@@ -291,6 +296,8 @@ public class DetailsFragment extends Fragment {
 
         Picasso.with(getContext())
                 .load("http://image.tmdb.org/t/p/w185"+movie.getPoster_path())
+                .resize(700,700)
+                .centerCrop()
                 .into(image);
         plot.setText(movie.getOverview());
         title.setText(movie.getTitle());

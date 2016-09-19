@@ -51,8 +51,6 @@ public class GridViewAdapter extends BaseAdapter {
         ImageView imageView;
         if (convertView == null) {
             imageView = new ImageView(usedContext);
-            //imageView.setLayoutParams(new GridView.LayoutParams(80, 80));
-            //imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setPadding(0, 0, 0, 0);
         } else {
             imageView = (ImageView) convertView;
@@ -61,7 +59,7 @@ public class GridViewAdapter extends BaseAdapter {
         String url = imgIds.get(position);
         Picasso.with(usedContext)
                 .load(url)
-                .resize(70, 70)
+                .resize(300,300)
                 .centerCrop()
                 .into(imageView);
         return imageView;
